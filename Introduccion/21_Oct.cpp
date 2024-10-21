@@ -1,3 +1,9 @@
+#include <iostream>
+using namespace std;
+
+
+int main()
+{
 /*1. Encontrar si un número es par o impar.*/
   
 /*2. Encontrar el mayor de dos números, solicita los dos números de tipo int.*/
@@ -77,3 +83,4 @@ Si todos los ingredientes tienen al menos un elemento, escribir en pantalla “P
 
 /* 10. Crear un programa en C++ que determine cuantos hot cakes se pueden hacer basado en la pregunta anterior.*/
 
+}
