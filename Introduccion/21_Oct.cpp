@@ -5,7 +5,16 @@ using namespace std;
 int main()
 {
 /*1. Encontrar si un número es par o impar.*/
-  
+  int num;
+cout << "Ingresar un numero: ";
+cin >> num;
+
+if (num % 2 == 0) {
+	cout << num << " es un numero par. " << endl;
+}
+else {
+	cout << num << " es un numero impar. " << endl;
+}
 /*2. Encontrar el mayor de dos números, solicita los dos números de tipo int.*/
 int n1, n2;
 cout << "n1 : ";
