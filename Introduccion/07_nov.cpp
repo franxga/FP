@@ -48,6 +48,37 @@ int main()
 		cout << "Dic" << endl;
 		break;
 	}
-
+srand(time(NULL)); //Semilla
+int castigo = 0, i = 0;
+while (i <= 10) {
+	castigo = rand() % 2;
+	cout << castigo << endl;
+	i++;
+}
+PRACTICA E
+srand(time(NULL)); //Semilla
+int castigo = 0;
+int vida = 12;
+int premio = 0;
+cout << "vida inicial " << vida << endl;
+while (vida > 0) {
+	//Deducir uno a vida
+	vida--;
+	cout << "Costo de ciclo " << vida << endl;
+	// castigo?
+	castigo = rand() % 2;
+	if (castigo == 1) {
+		vida = vida - 3;
+		cout << "Castigo " << vida << endl;
+	}
+	premio = rand() % 2;
+	if (premio == 1) {
+		vida = vida + 3;
+		cout << "Premio "
+			<< vida << endl;
+		}
+	cout << "Vida despues ciclo "
+		<< vida << endl;
+}
 
 }
