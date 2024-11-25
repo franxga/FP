@@ -1,0 +1,91 @@
+/*Ejercicio #1 Realice el programa en C++ que solicite un número e imprima el numero
+multiplicado por 10 y esto lo seguirá haciendo hasta que el usuario ingrese un cero. Utilice
+el arreglo preconstruido.*/
+vector <int> numeros;
+	int num;
+	num = -1;
+	while (num != 0)
+	
+	{
+		cout << "Numero: ";
+		cin >> num;
+		if (num == 0)
+		{
+			break;
+		}
+		numeros.push_back(num);
+	}
+	for (int elemento : numeros)
+	{
+		cout << elemento << endl;
+	}
+	/*Ejercicio #2 Realice el programa en C++ que encuentre el mayor elemento de un arreglo de
+tipo entero. Utilice el arreglo preconstruido*/
+		int numeros[10]
+	{ 34, 23, 94, 53, 16, 27, 5, 25, 42, 82 };
+	vector <int> vnum { 34, 23, 94, 53, 16, 27, 5, 25, 42, 82 };
+	int mayor = -1;
+		for (int i = 0; i <= 9; i++)
+		{
+			if (vnum[i] > mayor) {
+				mayor = numeros[i];
+			}
+		}
+		cout << "El mayor es: " << mayor << endl;
+ 	/*Ejercicio #3 Realice el programa en C++ que encuentre el mayor elemento de un arreglo de
+tipo entero. Utilice el arreglo preconstruido*/
+		int numeros[10]
+	{ 34, 23, 94, 53, 16, 27, 5, 25, 42, 82 };
+	vector <int> vnum { 34, 23, 94, 53, 16, 27, 5, 25, 42, 82 };
+	int menor = -1;
+		for (int i = 0; i <= 9; i++)
+		{
+			if (vnum[i] > menor) {
+				menor = numeros[i];
+			}
+		}
+		cout << "El menor es: " << menor << endl;
+}
+	/*Ejercicio #3 Realice el programa en C++ que encuentre el mayor elemento de un arreglo de
+tipo entero. Utilice el arreglo preconstruido*/
+	int numeros[10]
+	{ 34, 23, 94, 53, 16, 27, 5, 25, 42, 82 };
+	int numero, primero, segundo, tercero,
+		temp = 0;
+	primero = numeros[0];
+	segundo = numeros[1];
+	tercero = numeros[2];
+	if (primero > segundo) {
+		temp = primero;
+		primero = segundo;
+		segundo = temp;
+	}
+	if (primero < tercero)
+	{
+		temp = primero;
+		primero = tercero;
+		tercero = temp;
+	}
+	if (segundo < tercero)
+	{
+		temp = segundo;
+		segundo = tercero;
+		tercero = temp;
+
+		//Encontrar los tres mayores elementos
+		for (int i = 3; i < 9; i++)
+		{
+			if (numeros[i] > primero) {
+				tercero = segundo;
+				segundo = primero;
+				primero = numeros[i];
+			}
+			else if (numeros[i] > tercero)
+			{
+				tercero = numeros[i];
+			}
+		}
+		cout << primero << endl;
+		cout << segundo << endl;
+		cout << tercero << endl;
+	}
