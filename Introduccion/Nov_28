@@ -1,0 +1,27 @@
+// ConsoleApplication1.cpp : Este archivo contiene la función "main". La ejecución del programa comienza y termina ahí.
+//
+
+#include <iostream>
+using namespace std;
+
+//Variables globales: fuera de la funcion main
+int n1, n2;
+//Funciones
+void pedirNumeros() {
+	cout << "Dame el no. 1: ";
+	cin >> n1;
+	cout << "Dame el no. 2: ";
+	cin >> n2;
+}
+
+void suma(int n1, int n2)
+{
+	//Suma de parametros
+	cout << n1 + n2 << endl;
+}
+//No puedo definir funciones dentro de otra funcion
+int main() // Punto de enntrada
+{
+	pedirNumeros();
+	suma(n1, n2);//argumentos
+}
