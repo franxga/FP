@@ -1,0 +1,113 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //Ejemplos:
+            Console.WriteLine("Esto es un string");
+            Console.WriteLine("Hola Mundo");
+
+            int numero = 5;
+            Console.WriteLine("Tu numero es : " + numero);
+
+            // Enteros
+            int numero1 = 5; // Variable de tipo entero
+            Console.WriteLine(numero1);
+            // Double, Float, Decimal
+            float numero0 = 1.15f;
+            double numero2 = 3.14; // Variable de tipo doble
+            decimal numero3 = 6.24m;
+            Console.WriteLine(numero1);
+            // char
+            char letra = 'A'; // Variable de tipo carácter
+            Console.WriteLine(letra);
+            // bool
+            bool esVerdad = true;
+            Console.WriteLine(esVerdad);
+            //long
+            long numeroGrande = 9_223_372_036_854_775_807; // Máximo valor de long
+            Console.WriteLine(numeroGrande);
+            // short
+            short numeroPequeno = 32_767; // Máximo valor de short
+            Console.WriteLine(numeroPequeno);
+            //byte
+            byte numeroByte = 255; // Máximo valor de byte
+            Console.WriteLine(numeroByte);
+
+            string texto = "Hola, mundo!"; // Variable de tipo cadena de caracteres
+
+            var numero5 = 10;               // C# inferirá que es un int
+            var texto2 = "Hola";            // C# inferirá que es un string
+
+            const int velocidadLuz = 300_000;     // Variable constante, no se puede cambiar
+            Console.WriteLine();
+            int edad;
+            Console.WriteLine("Ingresa tu edad: ");
+            edad = int.Parse(Console.ReadLine());
+            Console.WriteLine("Tu edad es: "+ edad);
+            double estatura, peso, mc;
+            Console.WriteLine("Ingresa tu peso : ");
+            peso = double.Parse(Console.ReadLine());
+            Console.WriteLine("Ingresa tu estatura: ");
+            estatura = double.Parse(Console.ReadLine());
+            mc = peso / Math.Pow(estatura, 2);
+            if (mc < 2)
+            {
+                Console.WriteLine("Tu peso esta bajo");
+            }
+
+
+            var rand = new Random();
+            Console.WriteLine("Random.Next : " + rand.Next());
+            Console.WriteLine("Random.Next rango : " + rand.Next(0, 2));
+            Console.WriteLine("Random.Next double : " + rand.NextDouble());
+
+            //<tipo_variable>[] nombre_arreglo = new  <tipo_variable>[# de elementos]
+            //Ejemplo:
+            int[] naturales = new int[10] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+            // declaración sin inicializar el numero de elementos
+            int[] numeros = { 1, 2, 3, 4, 5 }; // Declaración e inicialización de un arreglo de enteros
+            string[] nombres = { "Ana", "Luis", "Carlos" }; // Declaración e inicialización de un arreglo de strings
+                                                            // imprimir arreglos
+            for (int i = 0; i <= 9; i++)
+            {
+                Console.Write(naturales[i] + " ,");
+            }
+            Console.WriteLine();
+            // formato de impresión con foreach
+            foreach (var elemento in naturales)
+            {
+                Console.Write(elemento + " ,");
+            }
+
+
+            //<tipo_variable>[,] nombre_arreglo = new  <tipo_variable>[# de renglones , # de columnas]
+            //Ejemplo:
+            int[,] matriz = new int[2, 2] { { 1, 2 }, { 3, 4 } }; // Declaración e inicialización de un arreglo bidimensional
+
+            for (int i = 0; i <= 1; i++)
+            {
+                for (int j = 0; j <= 1; j++)
+                {
+                    Console.Write(matriz[i, j] + " ,");
+                }
+                Console.WriteLine();
+            }
+
+            // Acceder a los elementos del arreglo bidimensional
+            Console.WriteLine(matriz[1, 1]); // Imprime: 4
+            Console.WriteLine(matriz[0, 1]); // Imprime: 3
+
+            string nombre;
+            Console.WriteLine("Dame tu nombre: ");
+            nombre = Console.ReadLine();
+        }
+    }
+}
